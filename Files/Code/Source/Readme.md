@@ -15,4 +15,4 @@
 
 **8.SmCal.HTML - Calculator with Mic with Javascript 2.js**
 
-**9.Temp.HTML - Temperature Converter along with JavaScrip**
+**9.Temp.HTML - Temperature Converter along with JavaScript**
