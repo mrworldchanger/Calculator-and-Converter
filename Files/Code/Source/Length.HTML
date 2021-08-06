@@ -1,0 +1,229 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="6.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:600,700" rel="stylesheet">
+		<title>Length Conversion</title>
+	</head>
+	<body style="overflow-y:scroll;overflow-x:hidden">
+		<div id="Box">
+			<div id="heading">
+				<div id="logo">
+					<img src="Images/8.png" style="width:80px;height:80px">
+				</div>
+				<div id="heading">
+					<h1>LENGTH<br>CONVERTER</h1>
+				</div>
+			</div>
+			<div id="sub">
+				<marquee width="90%" direction="left"><h2>Note - Enter Length in Numeric Format in Any of One Input Box and its is Converted into All other Format </h2></marquee>
+			</div>
+			<div id="subbox">
+				<form>
+					<div id="block">
+						<label><h2>Millimeters (mm) </h2></label>
+						<input id="inputMillimeters" type="number" placeholder="Enter Length in Millimeters" oninput="Converter(this.id,this.value)" onchange="Converter(this.id,this.value)"><br>
+					</div>
+					<br>
+					<div id="block">
+						<label><h2>Centimetre (cm)</h2></label>
+						<input id="inputCentimetre" type="number"  placeholder="Enter Length in Centimetre" oninput="Converter(this.id,this.value)" onchange="Converter(this.id,this.value)"><br>
+					</div>
+					<br>
+					<div id="block">
+						<label><h2>Inches (in)</h2></label>
+						<input id="inputInches" type="number"  placeholder="Enter Length in Inches" oninput="Converter(this.id,this.value)" onchange="Converter(this.id,this.value)"><br>
+					</div>	
+					<br>
+					<div id="block">
+						<label><h2>Foot (ft)</h2></label>
+						<input id="inputFoot" type="number"  placeholder="Enter Length in Foot" oninput="Converter(this.id,this.value)" onchange="Converter(this.id,this.value)"><br>
+					</div>
+					<br>
+					<div id="block">
+						<label><h2>Yard (yd)</h2></label>
+						<input id="inputYard" type="number"  placeholder="Enter Length in Yard" oninput="Converter(this.id,this.value)" onchange="Converter(this.id,this.value)"><br>
+					</div>	
+				</form>
+			</div>
+			<div id="subbox">
+				<form>
+					<div id="block">
+						<label><h2>Meter (m) </h2></label>
+						<input id="inputMeter" type="number" placeholder="Enter Length in Meter" oninput="Converter(this.id,this.value)" onchange="Converter(this.id,this.value)"><br>
+					</div>
+					<br>
+					<div id="block">
+						<label><h2>Kilometer (km)</h2></label>
+						<input id="inputKilometer" type="number"  placeholder="Enter Length in Kilometer" oninput="Converter(this.id,this.value)" onchange="Converter(this.id,this.value)"><br>
+					</div>
+					<br>
+					<div id="block">
+						<label><h2>Miles (mi)</h2></label>
+						<input id="inputMiles" type="number"  placeholder="Enter Length in Miles" oninput="Converter(this.id,this.value)" onchange="Converter(this.id,this.value)"><br>
+					</div>	
+					<br>
+					<div id="block">
+						<label><h2>Nautical Mile (nmi)</h2></label>
+						<input id="inputNauticalMile" type="number"  placeholder="Enter Length in Nautical Mile" oninput="Converter(this.id,this.value)" onchange="Converter(this.id,this.value)"><br>
+					</div>
+					<br>
+					<div id="block">
+						<label><h2>Lunar Distance (ld)</h2></label>
+						<input id="inputLunarDistance" type="number"  placeholder="Enter Length in Lunar Distance" oninput="Converter(this.id,this.value)" onchange="Converter(this.id,this.value)"><br>
+					</div>	
+				</form>
+			</div>
+			<div id="foot">
+				<h2>Designed By Siddharth Tomar </h2>
+			</div>
+		</div>
+		<br>
+		
+	</body>
+	<script>
+		function Converter(source,valNum) 
+		{
+		  var num = parseFloat(valNum);
+		  var mm = document.getElementById("inputMillimeters");
+		  var cm = document.getElementById("inputCentimetre");
+		  var inc = document.getElementById("inputInches");
+		  var foot = document.getElementById("inputFoot");
+		  var yard = document.getElementById("inputYard");
+		  var meter = document.getElementById("inputMeter");
+		  var km = document.getElementById("inputKilometer");
+		  var mi = document.getElementById("inputMiles");
+		  var nmi = document.getElementById("inputNauticalMile");
+		  var ld = document.getElementById("inputLunarDistance");
+		  switch(source)
+		  {
+				case "inputMillimeters":
+					mm.value= num;
+					cm.value= num*0.1;
+					inc.value= num*0.0393701;
+					foot.value= num*0.00328084;
+					yard.value= num*0.00109361;
+					meter.value=num*0.001;
+					km.value= num*1e-6;
+					mi.value= num*6.2137e-7;
+					nmi.value=num*5.3996e-7;
+					ld.value=num*2.60145005e-12;
+					break;
+				case "inputCentimetre":
+					mm.value= num*10;
+					cm.value= num;
+					inc.value= num*0.393701;
+					foot.value= num*0.0328084;
+					yard.value= num*0.0109361;
+					meter.value=num*0.01;
+					km.value= num*1e-5;
+					mi.value= num*6.2137e-6;
+					nmi.value=num*5.3996e-6;
+					ld.value=num*2.60145005e-11;
+					break;
+				case "inputInches":
+					mm.value= num*25.400150368;
+					cm.value= num*2.5400150368;
+					inc.value= num;
+					foot.value= num*0.0833333;
+					yard.value= num*0.0277778;
+					meter.value=num*0.0254;
+					km.value= num*2.54e-5;
+					mi.value= num*1.5783e-5;
+					nmi.value=num*1.3715e-5;
+					ld.value=num*6.60768312e-11;
+					break;
+				case "inputFoot":
+					mm.value= num*304.8;
+					cm.value= num*30.48;
+					inc.value= num*12;
+					foot.value= num;
+					yard.value= num*0.333334;
+					meter.value=num*0.3048;
+					km.value= num*0.0003048;
+					mi.value= num*0.000189394;
+					nmi.value=num*0.0001645788863585;
+					ld.value=num*7.92921975e-10;
+					break;
+				case "inputYard":
+					mm.value= num*914.4;
+					cm.value= num*91.44;
+					inc.value= num*36;
+					foot.value= num*3;
+					yard.value= num;
+					meter.value=num*0.9144;
+					km.value= num*0.0009144;
+					mi.value= num*0.000568182;
+					nmi.value=num*0.000493736501;
+					ld.value=num*2.3787659e-9;
+					break;
+				case "inputMeter":
+					mm.value= num*1000;
+					cm.value= num*100;
+					inc.value= num*39.3701;
+					foot.value= num*3.280841666667;
+					yard.value= num*1.09361;
+					meter.value=num;
+					km.value= num*0.001;
+					mi.value= num*0.000621371;
+					nmi.value=num*0.000539957;
+					ld.value=num*2.60145005e-9;
+					break;
+				case "inputKilometer":
+					mm.value= num*1e+6;
+					cm.value= num*100000;
+					inc.value= num*39370.1;
+					foot.value= num*3280.84;
+					yard.value= num*1093.61;
+					meter.value=num*1000;
+					km.value= num;
+					mi.value= num*0.621371;
+					nmi.value=num*0.539957;
+					ld.value=num*2.60145005e-6;
+					break;
+				case "inputMiles":
+					mm.value= num*1.609e+6;
+					cm.value= num*160934;
+					inc.value= num*63360;
+					foot.value= num*5280;
+					yard.value= num*1760;
+					meter.value=num*1609.34;
+					km.value= num*1.60934;
+					mi.value= num;
+					nmi.value=num*0.868976;
+					ld.value=num*4.18662803e-6;
+					break;
+				case "inputNauticalMile":
+					mm.value= num*1.852e+6;
+					cm.value= num*185200;
+					inc.value= num*72913.4;
+					foot.value= num*6076.12;
+					yard.value= num*2025.37;
+					meter.value=num*1852;
+					km.value= num*1.852;
+					mi.value= num*1.15078;
+					nmi.value=num;
+					ld.value=num*4.81788549e-6;
+					break;
+				case "inputLunarDistance":
+					mm.value= num*3.84401e11;
+					cm.value= num*3.84401e10;
+					inc.value= num*1.51338976e10;
+					foot.value= num*1.26115814e9;
+					yard.value= num*420386045;
+					meter.value=num*384401000;
+					km.value= num*384401;
+					mi.value= num*238855.708;
+					nmi.value=num*207559.935;
+					ld.value=num;
+					break;	
+		  }
+		}
+		function getFormattedNumber(num){
+			if(num=="-"){
+				return "";
+			}
+			var value = n.x.toString().toLocaleString("en");
+			return value;
+		}
+	</script>
+</html>

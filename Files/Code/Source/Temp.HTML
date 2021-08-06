@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Temperature Conversion</title>
+	<link rel="stylesheet" href="5.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:600,700" rel="stylesheet">
+	<style>
+		body
+		{
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		}
+		input,span
+		{
+			font-size: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="temperature">
+			<div id="heading">
+				<div id="logo">
+					<img src="Images/4.png" style="width:80px;height:80px">
+				</div>
+				<div id="heading">
+					<h1>TEMPERATURE<br>CONVERTER</h1>
+				</div>
+			</div>
+			<div id="sub">
+				<marquee width="90%" direction="left"><h2>Note - Enter Temperature in Numeric Format in Any of One Input Box and its is Converted into All other Format </h2></marquee>
+			</div>
+			<br>
+			<div id="insert">
+				<form>
+					<div id="block">
+						<label><h2>Fahrenheit (&#176;F) </h2></label>
+						<input id="inputFahrenheit" type="number" min="-459.66999999999996" placeholder="Enter Temp. in Degree Fahrenheit" oninput="Converter(this.id,this.value)" onchange="Converter(this.id,this.value)"><br>
+					</div>
+					<br>
+					<div id="block">
+						<label><h2>Celsius (&#176;C)</h2></label>
+						<input id="inputCelsius" type="number" min="-273.15" placeholder="Enter Temp. in Degree Celsius" oninput="Converter(this.id,this.value)" onchange="Converter(this.id,this.value)"><br>
+					</div>
+					<br>
+					<div id="block">
+						<label><h2>Kelvin (&#176;K)</h2></label>
+						<input id="inputKelvin" type="number" size="40" min="0" placeholder="Enter Temp. in Degree Kelvin" oninput="Converter(this.id,this.value)" onchange="Converter(this.id,this.value)"><br>
+					</div>		
+				</form>
+			</div>
+			<br>
+			<br>
+			<div id="foot">
+				<h2>Designed By Siddharth Tomar </h2>
+			</div>
+	<div>
+	<script>
+		function Converter(source,valNum) 
+		{
+		  valNum = parseFloat(valNum);
+		  var inputFahrenheit = document.getElementById("inputFahrenheit");
+		  var inputCelsius = document.getElementById("inputCelsius");
+		  var inputKelvin = document.getElementById("inputKelvin");
+		  if (source=="inputFahrenheit") 
+		  {
+			inputCelsius.value=((valNum-32)/1.8);
+			inputKelvin.value=(((valNum-32)/1.8)+273.15);
+		  }
+		  if (source=="inputCelsius") 
+		  {
+			inputFahrenheit.value=((valNum*1.8)+32);
+			inputKelvin.value=((valNum)+273.15);
+		  }
+		  if (source=="inputKelvin") 
+		  {
+			inputFahrenheit.value=(((valNum-273.15)*1.8)+32);
+			inputCelsius.value=((valNum)-273.15);
+		  }
+		}
+	</script>
+</body>
+</html>

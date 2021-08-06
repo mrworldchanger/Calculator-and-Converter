@@ -1,0 +1,85 @@
+*,body
+{
+	font-family: 'Roboto', sans-serif;
+	margin:0;
+	padding:0;
+}
+body
+{
+	background-color:#ebebeb;
+	font-family:'fira Sans',sans-serif;
+}
+.main-menu
+{
+	position:fixed;
+	top:0;
+	left:0;
+	width:270px; 
+	height:100vh;
+	background-color:#fff
+	border-top-right-radius:10px;
+	border-bottom-right-radius:10px; 
+	overflow:hidden;
+	white-space:nowrap; 
+	box-shadow: 0px 0px 20px #d4d4d4; 
+	transition: .32s ease;
+}
+.main-menu:hover
+{
+	overflow-y:scroll;
+	
+}
+.main-menu .item
+{
+	padding:10px;
+	font-weight:20px;
+}
+.main-menu .item:hover
+{
+	background-color:#FF9D88;
+	cursor:pointer;
+	
+}
+.main-menu .item .fa
+{
+	font-size:30px;
+	width:40px;
+	padding:10px;
+	color:black;
+}
+.main-menu .item:hover > .fa{
+    color: #1d0daa;
+}
+
+section.home
+{
+    background-color: #f3f3f3;
+}
+.links a
+{
+	text-decoration: none; 
+	color: black;
+}
+.home a
+{
+	text-decoration: none; 
+	color: black;
+}
+.social a
+{
+	text-decoration: none; 
+	color: black;
+}
+::-webkit-scrollbar
+{
+	width:5px;
+}
+::-webkit-scrollbar-track
+{
+	background: transparent;!important
+}
+::-webkit-scrollbar-thumb
+{
+	background: #bbbbbb;
+	border-radius: 10px;
+}

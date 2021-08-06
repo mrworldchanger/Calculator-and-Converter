@@ -1,0 +1,228 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="7.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:600,700" rel="stylesheet">
+		<title>Area Conversion</title>
+	</head>
+	<body style="overflow-y:scroll;overflow-x:hidden">
+		<div id="Box">
+			<div id="heading">
+				<div id="logo">
+					<img src="Images/10.png" style="width:80px;height:80px">
+				</div>
+				<div id="heading">
+					<h1>AREA<br>CONVERTER</h1>
+				</div>
+			</div>
+			<div id="sub">
+				<marquee width="90%" direction="left"><h2>Note - Enter Area in Numeric Format in Any of One Input Box and its is Converted into All other Format </h2></marquee>
+			</div>
+			<div id="subbox">
+				<form>
+					<div id="block">
+						<label><h2>Square Milimeter (mm<sup>2</sup>) </h2></label>
+						<input id="inputMillimeters" type="number" placeholder="Enter Area in Millimeters" oninput="Converter(this.id,this.value)" onchange="Converter(this.id,this.value)"><br>
+					</div>
+					<br>
+					<div id="block">
+						<label><h2>Square Centimetre (cm<sup>2</sup>)</h2></label>
+						<input id="inputCentimetre" type="number"  placeholder="Enter Area in Centimetre" oninput="Converter(this.id,this.value)" onchange="Converter(this.id,this.value)"><br>
+					</div>
+					<br>
+					<div id="block">
+						<label><h2>Square Inches (in<sup>2</sup>)</h2></label>
+						<input id="inputInches" type="number"  placeholder="Enter Area in Inches" oninput="Converter(this.id,this.value)" onchange="Converter(this.id,this.value)"><br>
+					</div>	
+					<br>
+					<div id="block">
+						<label><h2>Square Foot (ft<sup>2</sup>)</h2></label>
+						<input id="inputFoot" type="number"  placeholder="Enter Area in Foot" oninput="Converter(this.id,this.value)" onchange="Converter(this.id,this.value)"><br>
+					</div>
+					<br>
+					<div id="block">
+						<label><h2>Sqaure Yard (yd<sup>2</sup>)</h2></label>
+						<input id="inputYard" type="number"  placeholder="Enter Area in Yard" oninput="Converter(this.id,this.value)" onchange="Converter(this.id,this.value)"><br>
+					</div>	
+				</form>
+			</div>
+			<div id="subbox">
+				<form>
+					<div id="block">
+						<label><h2>Square Meter (m<sup>2</sup>) </h2></label>
+						<input id="inputMeter" type="number" placeholder="Enter Area in Meter" oninput="Converter(this.id,this.value)" onchange="Converter(this.id,this.value)"><br>
+					</div>
+					<br>
+					<div id="block">
+						<label><h2>Square Kilometer (km<sup>2</sup>)</h2></label>
+						<input id="inputKilometer" type="number"  placeholder="Enter Area in Kilometer" oninput="Converter(this.id,this.value)" onchange="Converter(this.id,this.value)"><br>
+					</div>
+					<br>
+					<div id="block">
+						<label><h2>Square Miles (mi<sup>2</sup>)</h2></label>
+						<input id="inputMiles" type="number"  placeholder="Enter Area in Miles" oninput="Converter(this.id,this.value)" onchange="Converter(this.id,this.value)"><br>
+					</div>	
+					<br>
+					<div id="block">
+						<label><h2>Hectare (ha)</h2></label>
+						<input id="inputHectare" type="number"  placeholder="Enter Area in Nautical Mile" oninput="Converter(this.id,this.value)" onchange="Converter(this.id,this.value)"><br>
+					</div>
+					<br>
+					<div id="block">
+						<label><h2>Acre (ac)</h2></label>
+						<input id="inputAcre" type="number"  placeholder="Enter Area in Acre" oninput="Converter(this.id,this.value)" onchange="Converter(this.id,this.value)"><br>
+					</div>	
+				</form>
+			</div>
+			<br>
+			<div id="foot">
+				<h2>Designed By Siddharth Tomar </h2>
+			</div>
+		</div>
+	</body>
+	<script>
+		function Converter(source,valNum) 
+		{
+		  var num = parseFloat(valNum);
+		  var mm = document.getElementById("inputMillimeters");
+		  var cm = document.getElementById("inputCentimetre");
+		  var inc = document.getElementById("inputInches");
+		  var foot = document.getElementById("inputFoot");
+		  var yard = document.getElementById("inputYard");
+		  var meter = document.getElementById("inputMeter");
+		  var km = document.getElementById("inputKilometer");
+		  var mi = document.getElementById("inputMiles");
+		  var hect = document.getElementById("inputHectare");
+		  var acre = document.getElementById("inputAcre");
+		  switch(source)
+		  {
+				case "inputMillimeters":
+					mm.value= num;
+					cm.value= num*0.01;
+					inc.value= num*0.00155000477401;
+					foot.value= num*0.0000107639111056
+					yard.value= num*1.195999005e-6;
+					meter.value=num*1e-6;
+					km.value= num*1e-12;;
+					mi.value= num*3.861102159e-13;
+					hect.value=num*1e-10;
+					acre.value=num*2.47105407e-10;
+					break;
+				case "inputCentimetre":
+					mm.value= num*100;
+					cm.value= num;
+					inc.value= num*0.15500031;
+					foot.value= num*0.00107639111056;
+					yard.value= num*0.00011959828321;
+					meter.value=num*0.0001;
+					km.value= num*1e-10;
+					mi.value= num*3.861102159e-11;
+					hect.value=num*1e-8;
+					acre.value=num*2.47105407e-8;
+					break;
+				case "inputInches":
+					mm.value= num*645.1676387170105;
+					cm.value= num*6.451676387170105;
+					inc.value= num;
+					foot.value= num*0.00694443888889;
+					yard.value= num*0.00077160617284;
+					meter.value=num*0.00064516;
+					km.value= num*2.54e-5*2.54e-5;
+					mi.value= num*1.5783e-5*1.5783e-5;
+					hect.value=num*6.4516e-8;
+					acre.value=num*1.59422525e-7;
+					break;
+				case "inputFoot":
+					mm.value= num*304.8*304.8;
+					cm.value= num*30.48*30.48;
+					inc.value= num*12*12;
+					foot.value= num;
+					yard.value= num*0.333334*0.333334;
+					meter.value=num*0.3048*0.3048;
+					km.value= num*0.0003048*0.0003048;
+					mi.value= num*0.000189394*000189394;
+					hect.value=num*9.290304e-6;
+					acre.value=num*2.29568435e-5;
+					break;
+				case "inputYard":
+					mm.value= num*914.4*914.4;
+					cm.value= num*91.44*91.44;
+					inc.value= num*36*36;
+					foot.value= num*3*3;
+					yard.value= num;
+					meter.value=num*0.9144*0.9144;
+					km.value= num*0.0009144*0.0009144;
+					mi.value= num*0.000568182*0.000568182;
+					hect.value=num*8.3612736e-5;
+					acre.value=num*0.000206611592;
+					break;
+				case "inputMeter":
+					mm.value= num*1000*1000;
+					cm.value= num*100*100;
+					inc.value= num*39.3701*39.3701;
+					foot.value= num*3.280841666667*3.280841666667;
+					yard.value= num*1.09361*1.09361;
+					meter.value=num;
+					km.value= num*0.001*0.001;
+					mi.value= num*0.000621371*0.000621371;
+					hect.value=num*0.0001;
+					acre.value=num*0.000241705407;
+					break;
+				case "inputKilometer":
+					mm.value= num*1e+6*1e+6;
+					cm.value= num*100000*100000;
+					inc.value= num*39370.1*39370.1;
+					foot.value= num*3280.84*3280.84;
+					yard.value= num*1093.61*1093.61;
+					meter.value=num*1000*1000;
+					km.value= num;
+					mi.value= num*0.621371*0.621371;
+					hect.value=num*100;
+					acre.value=num*247.105407;
+					break;
+				case "inputMiles":
+					mm.value= num*1.609e+6*1.609e+6;
+					cm.value= num*160934*160934;
+					inc.value= num*63360*63360;
+					foot.value= num*5280*5280;
+					yard.value= num*1760*1760;
+					meter.value=num*1609.34*1609.34;
+					km.value= num*1.60934*1.60934;
+					mi.value= num;
+					hect.value=num*258.9811;
+					acre.value=num*640.000067;
+					break;
+				case "inputHectare":
+					mm.value= num*1e+10;
+					cm.value= num*1e+8;
+					inc.value= num*15500031;
+					foot.value= num*107639.104;
+					yard.value= num*11959.9005;
+					meter.value=num*10000;
+					km.value= num*0.01;
+					mi.value= num*0.00386102159;
+					hect.value=num;
+					acre.value=num*2.47105407;
+					break;
+				case "inputAcre":
+					mm.value= num*4.046856e9;
+					cm.value= num*40468560;
+					inc.value= num*6272639.35;
+					foot.value= num*43559.9955;
+					yard.value= num*4839.99949;
+					meter.value=num*4046.856;
+					km.value= num*0.004046856;
+					mi.value= num*0.00156249984;
+					hect.value=num*0.4046856;
+					acre.value=num;
+					break;	
+		  }
+		}
+		function getFormattedNumber(num){
+			if(num=="-"){
+				return "";
+			}
+			var value = n.x.toString().toLocaleString("en");
+			return value;
+		}
+	</script>
+</html>
