@@ -11,7 +11,7 @@
 
 **6. Left.HTML - Left Menu**
 
-**7.Length - Length Converter along with JavaScrip**
+**7.Length - Length Converter along with JavaScript**
 
 **8.SmCal.HTML - Calculator with Mic with Javascript 2.js**
 
